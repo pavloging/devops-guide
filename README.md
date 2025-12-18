@@ -95,6 +95,12 @@ docker logs ВАШ_ID
 
 ## Одной строкой
 
+Linux
 ```bash
 docker stop $(docker ps -qa) && docker rm $(docker ps -qa) && docker rmi -f $(docker images -qa) && docker volume rm $(docker volume ls -q) && docker network rm $(docker network ls -q)
+```
+
+Win
+```bash
+docker stop $(docker ps -q -a); docker rm $(docker ps -q -a); docker rmi -f $(docker images -q -a); docker volume rm $(docker volume ls -q); docker network rm $(docker network ls -q)
 ```
